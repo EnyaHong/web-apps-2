@@ -8,3 +8,14 @@
 <p>
     <a href="/companies"> Back to all companies </a>
 </p>
+
+<ul>
+    <% for contact in @contacts %>
+        <li>
+            <%= contact["first_name"] %>
+            <%= contact["last_name"] %>
+        </li>
+    <% end %>
+</ul>
+
+<a href="/contacts/new?company_id= <%= @company["id"] %>">Add contact for <%= @company["name"]%> </a>
